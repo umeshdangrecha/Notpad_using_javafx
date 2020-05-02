@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderPane" stylesheets="style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.umeshpatidar.Controller">
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="File">
+                    <items>
+                        <MenuItem onAction="#saveContent" text="Save" />
+                        <MenuItem onAction="#openFile" text="Open" />
+                        <MenuItem onAction="#newFile" text="New" />
+                        <MenuItem onAction="#saveContent" text="Save As.." />
+                        <MenuItem onAction="#newWindow" text="New Window" />
+                        <SeparatorMenuItem />
+                        <MenuItem text="Print" />
+                        <MenuItem text="Page Setup" />
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#exit" text="exit" />
+
+                    </items>
+                </Menu>
+
+                <Menu text="Edit">
+                    <items>
+
+                    </items>
+                </Menu>
+
+                <Menu text="Format">
+                    <items>
+
+                    </items>
+                </Menu>
+
+                <Menu text="View">
+                    <items>
+
+                    </items>
+                </Menu>
+
+                <Menu text="Help">
+                    <items>
+
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+
+    </top>
+    <center>
+        <TextArea fx:id="textArea" onKeyPressed="#keyEventHandle" style="-fx-background-color: #888;" />
+    </center>
+
+</BorderPane>
